@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "https://cl-missed-connections.herokuapp.com/sign-up" \
+curl "http://localhost:4741/sign-up" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \
