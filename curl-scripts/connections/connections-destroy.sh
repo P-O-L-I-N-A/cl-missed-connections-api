@@ -1,3 +1,4 @@
 #!/bin/bash
 
-curl --include --request DELETE "https://cl-missed-connections.herokuapp.com/connections/${ID}"
+curl --include --request DELETE "http://localhost:4741/connections/${ID}" \
+  --header "Authorization: Token token=${TOKEN}" \
