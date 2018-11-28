@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
   resources :connections, except: %i[edit]
-  resources :my_attrs, except: %i[new edit]
+  resources :my_attrs, except: %i[edit]
   resources :attrs
   # RESTful routes
   resources :examples, except: %i[new edit]

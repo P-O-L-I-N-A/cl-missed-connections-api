@@ -1,4 +1,4 @@
-class MyAttrsController < ApplicationController
+class MyAttrsController < OpenReadController
   before_action :set_my_attr, only: %i[show update destroy]
 
   # GET /my_attrs
@@ -16,6 +16,7 @@ class MyAttrsController < ApplicationController
   # POST /my_attrs
   def create
     @my_attr = MyAttr.new(my_attr_params)
+    @my_attr = current_user.my_attrs.new(my_attr_params)
 
     if @my_attr.save
       render json: @my_attr, status: :created, location: @my_attr
