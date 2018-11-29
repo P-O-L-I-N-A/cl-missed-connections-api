@@ -15,7 +15,7 @@ class ConnectionsController < OpenReadController
 
   # POST /connections
   def create
-    @connection = Connection.new(connection_params)
+    # @connection = Connection.new(connection_params)
     @connection = current_user.connections.new(connection_params)
 
     if @connection.save
