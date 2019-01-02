@@ -3,7 +3,7 @@ class ConnectionsController < OpenReadController
 
   # GET /connections
   def index
-    @connections = Connection.all
+    @connections = Connection.all.order(id: :desc)
 
     render json: @connections
   end
